@@ -2001,13 +2001,13 @@ select.selectpicker {
     padding: 9px;
   }
   .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon {
-    -ms-flex: 1 0 .5;
-        flex: 1 0 .5;
-    padding-right: 20px;
+    -ms-flex: 1 0 0px;
+        flex: 1 0 0;
+    text-align: left;
   }
   .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title {
-    -ms-flex: 3.5;
-        flex: 3.5;
+    -ms-flex: 3;
+        flex: 3;
   }
 }
 .applauncher-pf .dropdown-menu {
@@ -2301,16 +2301,16 @@ select.selectpicker {
   .navbar-pf-alt .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon,
   .navbar-pf .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon,
   .navbar-pf-alt .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-icon {
-    -ms-flex: 1 0 .5;
-        flex: 1 0 .5;
-    padding-right: 20px;
+    -ms-flex: 1 0 0px;
+        flex: 1 0 0;
+    text-align: left;
   }
   .navbar-pf .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title,
   .navbar-pf-alt .navbar-utility .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title,
   .navbar-pf .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title,
   .navbar-pf-alt .applauncher-pf:not(.applauncher-pf-block-list) .applauncher-pf-link-title {
-    -ms-flex: 3.5;
-        flex: 3.5;
+    -ms-flex: 3;
+        flex: 3;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
