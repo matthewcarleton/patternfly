@@ -1977,8 +1977,8 @@ select.selectpicker {
 }
 @media (min-width: 768px) {
   .applauncher-pf-block-list .applauncher-pf-item {
-    -ms-flex: 1 50%;
-        flex: 1 50%;
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
   }
 }
 .applauncher-pf-block-list .applauncher-pf-link {
@@ -2275,8 +2275,8 @@ select.selectpicker {
   .navbar-pf-alt .navbar-utility .applauncher-pf-block-list .applauncher-pf-item,
   .navbar-pf .applauncher-pf-block-list .applauncher-pf-item,
   .navbar-pf-alt .applauncher-pf-block-list .applauncher-pf-item {
-    -ms-flex: 1 50%;
-        flex: 1 50%;
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
