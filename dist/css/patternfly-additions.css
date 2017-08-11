@@ -2041,7 +2041,7 @@ select.selectpicker {
 }
 @media (min-width: 768px) {
   .navbar-utility .applauncher-pf .dropdown-menu {
-    margin-top: 11px;
+    margin-top: 3px;
     right: 0;
   }
 }

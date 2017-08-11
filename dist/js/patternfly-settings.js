@@ -2,7 +2,7 @@
   'use strict';
 
   var patternfly = {
-    version: "$VERSION",
+    version: "3.26.1",
   };
 
   // definition of breakpoint sizes for tablet and desktop modes
