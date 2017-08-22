@@ -10,7 +10,10 @@
   overflow-y: auto;
   position: absolute;
   right: 0;
-  width: 320px;
+  width: 100%;
+  @media (min-width: @screen-sm-min) {
+    width:320px; // this isn't set to max-width to account for the expand option on desktop
+  }
   z-index: 2;
   .panel {
     border-bottom: none;
@@ -203,7 +206,6 @@
     top: 58px; //menu height;
 
       @media (max-width: @screen-xs-max) {
-        width:100%;
         height: 100vh; // override to show use full height
       }
 
@@ -225,7 +227,15 @@
 .navbar-pf {
   .drawer-pf {
     height: calc(~"100vh - 46px");
-    top: 26px;
+
+      @media (min-width: @screen-sm-min) {
+        top: 26px;
+      }
+
+      @media (max-width: @screen-xs-max) {
+        top:34px;
+        height: 100vh;
+      }
   }
   .drawer-pf-trigger-icon { cursor: pointer; }
 }
