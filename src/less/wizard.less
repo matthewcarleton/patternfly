@@ -158,6 +158,16 @@
         font-weight: 700;
           .wizard-pf-step-title {
             margin-left: 10px;
+
+            &-substep{
+              font-weight: normal;
+              margin-left: 10px;
+              text-transform: capitalize;
+              &:before{
+                content:'»';
+                margin-right: 10px;
+              }
+            }
           }
       }
     }
