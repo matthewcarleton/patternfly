@@ -158,6 +158,20 @@
         font-weight: 700;
           .wizard-pf-step-title {
             margin-left: 10px;
+
+            &-substep {
+              font-weight: normal;
+              margin-left: 10px;
+              text-transform: capitalize;
+              &:before {
+                content:"\00BB";
+                font-size: 20px;
+                margin-right: 10px;
+              }
+              &:not(.active) {
+                display: none;
+              }
+            }
           }
       }
     }
