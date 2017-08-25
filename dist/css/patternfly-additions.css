@@ -5547,6 +5547,12 @@ a.disabled {
 .drawer-pf.drawer-pf-expanded {
   width: inherit;
 }
+@media (max-width: 767px) {
+  .drawer-pf.drawer-pf-expanded {
+    left: 0;
+    width: 100%;
+  }
+}
 @media (min-width: 767px) {
   .drawer-pf.drawer-pf-expanded {
     left: 270px;
@@ -5726,6 +5732,13 @@ a.disabled {
 .navbar-pf .drawer-pf {
   height: calc(100vh - 46px);
   top: 26px;
+}
+@media (max-width: 767px) {
+  .navbar-pf .drawer-pf {
+    width: 100%;
+    height: calc(100vh - 58px);
+    top: 68px;
+  }
 }
 .navbar-pf .drawer-pf-trigger-icon {
   cursor: pointer;
