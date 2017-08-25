@@ -159,13 +159,17 @@
           .wizard-pf-step-title {
             margin-left: 10px;
 
-            &-substep{
+            &-substep {
               font-weight: normal;
               margin-left: 10px;
               text-transform: capitalize;
-              &:before{
-                content:'»';
+              &:before {
+                content:"\00BB";
+                font-size: 20px;
                 margin-right: 10px;
+              }
+              &:not(.active){
+                display: none;
               }
             }
           }
