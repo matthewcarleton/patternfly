@@ -1205,7 +1205,7 @@
 (function ($) {
   'use strict';
 
-  $.fn.setupVerticalNavigation = function (handleItemSelections) {
+  $.fn.setupVerticalNavigation = function (handleItemSelections, ignoreDrawer) {
 
     var navElement = $('.nav-pf-vertical'),
       bodyContentElement = $('.container-pf-nav-pf-vertical'),
@@ -1465,10 +1465,12 @@
               navElement.addClass('show-mobile-nav');
 
               // If the notification drawer is shown, hide it
-              $drawer = $('.drawer-pf');
-              if ($drawer.length) {
-                $('.drawer-pf-trigger').removeClass('open');
-                $drawer.addClass('hide');
+              if (!ignoreDrawer) {
+                $drawer = $('.drawer-pf');
+                if ($drawer.length) {
+                  $('.drawer-pf-trigger').removeClass('open');
+                  $drawer.addClass('hide');
+                }
               }
             }
           } else if (navElement.hasClass('collapsed')) {

@@ -5545,8 +5545,12 @@ a.disabled {
   display: block;
 }
 .drawer-pf.drawer-pf-expanded {
-  left: 270px;
   width: inherit;
+}
+@media (min-width: 767px) {
+  .drawer-pf.drawer-pf-expanded {
+    left: 270px;
+  }
 }
 .drawer-pf.drawer-pf-expanded .drawer-pf-toggle-expand:before {
   content: "\f101";
@@ -5687,6 +5691,12 @@ a.disabled {
 .drawer-pf-notification.expanded-notification .drawer-pf-notification-content {
   display: -ms-flexbox;
   display: flex;
+}
+@media (max-width: 991px) {
+  .drawer-pf-notification.expanded-notification .drawer-pf-notification-content {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
 }
 .drawer-pf-notification.expanded-notification .drawer-pf-notification-content .drawer-pf-notification-message {
   -ms-flex: 1 1;
