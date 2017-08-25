@@ -5737,7 +5737,7 @@ a.disabled {
   .navbar-pf .drawer-pf {
     width: 100%;
     height: calc(100vh - 58px);
-    top: 68px;
+    top: 34px;
   }
 }
 .navbar-pf .drawer-pf-trigger-icon {
