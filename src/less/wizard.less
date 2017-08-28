@@ -2,13 +2,18 @@
 // Wizard
 // --------------------------------------------------
 .wizard-pf {
-  height:100%;
+  @media (max-width: @screen-xs-min) {
+    min-height: 100vh;
+  }
+  @media (min-width: @screen-xs-min) {
+    height:100%;
+  }
   margin: 0 auto;
   max-height: 900px;
   padding: 10px;
   width: auto;
   .modal-content {
-    height:100%;
+    min-height:100%;
   }
 }
 
@@ -18,13 +23,14 @@
 .wizard-pf-body {
     padding: 0;
     position: static;
+    background:#fff;
 }
 /* styles the sidebard containing the sub-steps */
 .wizard-pf-sidebar {
-  @media (max-width: @screen-sm-min) {
+  @media (max-width: @screen-xs-min) {
     display:none;
   }
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-xs-min) {
     background: @color-pf-black-100;
     border-right: 1px solid @color-pf-black-300;
     bottom: 0;
@@ -113,7 +119,7 @@
 .wizard-pf-steps {
   border-bottom: solid 1px @color-pf-black-300;
 
-    @media (min-width: @screen-sm-min) {
+    @media (min-width: @screen-xs-min) {
       text-align: center;
     }
 
@@ -124,12 +130,12 @@
   display: inline-block;
   display: flex;
   list-style: none;
-    @media (min-width: @screen-sm-min) {
+    @media (min-width: @screen-xs-min) {
       height: 120px;
       padding: 38px 0 0;
       justify-content: space-around;
     }
-    @media (max-width: @screen-sm-min) {
+    @media (max-width: @screen-xs-min) {
       padding: 15px 0;
       margin-bottom: 0;
       background: @color-pf-black-200;
@@ -146,13 +152,15 @@
     position: relative;
     text-align: center;
     &:not(.active) {
-      display: none;
-      @media (min-width: @screen-sm-min) {
+      @media (min-width: @screen-xs-min) {
               display: block;
+      }
+      @media (max-width: @screen-xs-min) {
+              display: none;
       }
     }
     a {
-      @media (max-width: @screen-sm-min) {
+      @media (max-width: @screen-xs-min) {
         display: flex;
         align-items: center;
         font-weight: 700;
@@ -176,7 +184,10 @@
       }
     }
     /* draw the line between the circles */
-    @media (min-width: @screen-sm-min) {
+    @media (min-width: @screen-xs-min) {
+      .wizard-pf-step-title-substep {
+        display: none;
+      }
       &:before {
         background-color: @color-pf-black-400;
         content: "";
@@ -227,7 +238,7 @@
     font-weight: 700;
     height: 25px;
     line-height: 22px;
-      @media (min-width: @screen-sm-min) {
+      @media (min-width: @screen-xs-min) {
         position: absolute;
         top: 27px;
         left: ~"calc(50% - 13px)";
@@ -256,11 +267,11 @@
   overflow: auto;
   vertical-align: top;
 
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-xs-min) {
     padding:3em;
     margin-left: 253px; /* this value is updated by js */
   }
-  @media (max-width: @screen-sm-min) {
+  @media (max-width: @screen-xs-min) {
     padding:1em;
     width:100%;
     &[style] {
@@ -399,13 +410,15 @@
 /* styles the footer */
 .wizard-pf-footer {
   border-top: 1px solid @color-pf-black-300;
-  bottom: 0;
-  left: 0;
   margin-top: 0;
   padding-bottom: 17px;
-  position: absolute;
-  right: 0;
-
+  background:#fff;
+    @media (min-width: @screen-xs-min) {
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;//this is removed for mobile to allow for pages with longer content.
+    }
   .btn-cancel {
     margin-right:25px;
   }
@@ -413,7 +426,7 @@
 
 .wizard-pf-row {
 
-    @media (min-width: @screen-sm-min) {
+    @media (min-width: @screen-xs-min) {
       bottom: 58px; /* this value is updated by js */
       position: absolute;
       overflow: hidden;
