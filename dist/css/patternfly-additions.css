@@ -7375,26 +7375,36 @@ table.dataTable th:active {
   transition: visibility 100ms, opacity 100ms linear;
 }
 .wizard-pf {
-  height: 100%;
   margin: 0 auto;
   max-height: 900px;
   padding: 10px;
   width: auto;
 }
+@media (max-width: 480px) {
+  .wizard-pf {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 480px) {
+  .wizard-pf {
+    height: 100%;
+  }
+}
 .wizard-pf .modal-content {
-  height: 100%;
+  min-height: 100%;
 }
 .wizard-pf-body {
   padding: 0;
   position: static;
+  background: #fff;
 }
 /* styles the sidebard containing the sub-steps */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .wizard-pf-sidebar {
     display: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .wizard-pf-sidebar {
     background: #fafafa;
     border-right: 1px solid #d1d1d1;
@@ -7480,7 +7490,7 @@ table.dataTable th:active {
 .wizard-pf-steps {
   border-bottom: solid 1px #d1d1d1;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .wizard-pf-steps {
     text-align: center;
   }
@@ -7493,7 +7503,7 @@ table.dataTable th:active {
   list-style: none;
   /* draw the step number in the circle */
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .wizard-pf-steps-indicator {
     height: 120px;
     padding: 38px 0 0;
@@ -7501,7 +7511,7 @@ table.dataTable th:active {
         justify-content: space-around;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .wizard-pf-steps-indicator {
     padding: 15px 0;
     margin-bottom: 0;
@@ -7524,15 +7534,17 @@ table.dataTable th:active {
   text-align: center;
   /* draw the line between the circles */
 }
-.wizard-pf-steps-indicator li:not(.active) {
-  display: none;
-}
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .wizard-pf-steps-indicator li:not(.active) {
     display: block;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .wizard-pf-steps-indicator li:not(.active) {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
   .wizard-pf-steps-indicator li a {
     display: -ms-flexbox;
     display: flex;
@@ -7557,9 +7569,12 @@ table.dataTable th:active {
     display: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .wizard-pf-steps-indicator li {
     /* don't draw the line between the circles on the ends */
+  }
+  .wizard-pf-steps-indicator li .wizard-pf-step-title-substep {
+    display: none;
   }
   .wizard-pf-steps-indicator li:before {
     background-color: #bbb;
@@ -7606,7 +7621,7 @@ table.dataTable th:active {
   line-height: 22px;
   width: 25px;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .wizard-pf-steps-indicator .wizard-pf-step-number {
     position: absolute;
     top: 27px;
@@ -7630,14 +7645,14 @@ table.dataTable th:active {
   overflow: auto;
   vertical-align: top;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .wizard-pf-main {
     padding: 3em;
     margin-left: 253px;
     /* this value is updated by js */
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .wizard-pf-main {
     padding: 1em;
     width: 100%;
@@ -7762,17 +7777,22 @@ table.dataTable th:active {
 /* styles the footer */
 .wizard-pf-footer {
   border-top: 1px solid #d1d1d1;
-  bottom: 0;
-  left: 0;
   margin-top: 0;
   padding-bottom: 17px;
-  position: absolute;
-  right: 0;
+  background: #fff;
+}
+@media (min-width: 480px) {
+  .wizard-pf-footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
 }
 .wizard-pf-footer .btn-cancel {
   margin-right: 25px;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .wizard-pf-row {
     bottom: 58px;
     /* this value is updated by js */
