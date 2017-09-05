@@ -7699,9 +7699,6 @@ table.dataTable th:active {
   overflow: auto;
   vertical-align: top;
 }
-.wizard-pf-main[style] {
-  margin-left: 0!important;
-}
 @media (min-width: 480px) {
   .wizard-pf-main {
     padding: 3em;
@@ -7835,14 +7832,6 @@ table.dataTable th:active {
   padding-bottom: 17px;
   background: #fff;
 }
-@media (min-width: 480px) {
-  .wizard-pf-footer {
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
-}
 .wizard-pf-footer .btn-cancel {
   margin-right: 25px;
 }
@@ -7851,7 +7840,8 @@ table.dataTable th:active {
     width: 100%;
     display: -ms-flexbox;
     display: flex;
-    height: 600px;
+    height: 900px;
+    max-height: 65vh;
   }
 }
 @media (min-width: 992px) {
