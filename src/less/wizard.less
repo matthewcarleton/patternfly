@@ -21,10 +21,9 @@
 }
 /* styles the sidebard containing the sub-steps */
 .wizard-pf-sidebar {
-  @media (max-width: @screen-xs-min) {
     display:none;
-  }
-  @media (min-width: @screen-xs-min) {
+  @media (min-width: @screen-md-min) {
+    display:inherit;
     background: @color-pf-black-100;
     border-right: 1px solid @color-pf-black-300;
     flex:0 0 auto;
@@ -110,7 +109,7 @@
 .wizard-pf-steps {
   border-bottom: solid 1px @color-pf-black-300;
 
-    @media (min-width: @screen-xs-min) {
+    @media (min-width: @screen-md-min) {
       text-align: center;
     }
 
@@ -121,17 +120,17 @@
   display: inline-block;
   display: flex;
   list-style: none;
-    @media (min-width: @screen-xs-min) {
+  padding: 15px 0;
+  margin-bottom: 0;
+  background: @color-pf-black-200;
+  border-top: 1px solid @color-pf-black-300;
+    @media (min-width: @screen-md-min) {
       height: 120px;
       padding: 38px 0 0;
       justify-content: space-around;
+      background: @color-pf-white;
     }
-    @media (max-width: @screen-xs-min) {
-      padding: 15px 0;
-      margin-bottom: 0;
-      background: @color-pf-black-200;
-      border-top: 1px solid @color-pf-black-300;
-    }
+
   li {
     counter-increment: section;
     float:left; /* float for IE9 since it doesn't support flex. If items wrap, they overlap */
@@ -143,18 +142,19 @@
     position: relative;
     text-align: center;
     &:not(.active) {
-      @media (min-width: @screen-xs-min) {
+      display: none;
+      @media (min-width: @screen-md-min) {
               display: block;
-      }
-      @media (max-width: @screen-xs-min) {
-              display: none;
       }
     }
     a {
-      @media (max-width: @screen-xs-min) {
         display: flex;
         align-items: center;
         font-weight: 700;
+        @media (min-width: @screen-md-min) {
+          font-weight: normal;
+          justify-content: center;
+        }
           .wizard-pf-step-title {
             margin-left: 10px;
 
@@ -172,10 +172,9 @@
               }
             }
           }
-      }
     }
     /* draw the line between the circles */
-    @media (min-width: @screen-xs-min) {
+    @media (min-width: @screen-md-min) {
       .wizard-pf-step-title-substep {
         display: none;
       }
@@ -229,7 +228,7 @@
     font-weight: 700;
     height: 25px;
     line-height: 22px;
-      @media (min-width: @screen-xs-min) {
+      @media (min-width: @screen-md-min) {
         position: absolute;
         top: 27px;
         left: ~"calc(50% - 13px)";
@@ -255,24 +254,20 @@
 .wizard-pf-main {
   // display: table-cell;
   height: 100%;
-  overflow: auto;
   vertical-align: top;
-  @media (min-width: @screen-xs-min) {
+  padding:1em;
+  width:100%;
+  @media (min-width: @screen-md-min) {
     padding:3em;
     flex:1 1 auto;
+    overflow: auto;
   }
-  @media (max-width: @screen-xs-min) {
-    padding:1em;
-    width:100%;
-  }
-  // width: 10000px;
   .blank-slate-pf {
     background-color: transparent;
     border: none;
     left: 0;
     right: 0;
   }
-
 }
 
 .wizard-pf-contents textarea {
@@ -407,7 +402,7 @@
 
 .wizard-pf-row {
 
-    @media (min-width: @screen-xs-min) {
+    @media (min-width: @screen-md-min) {
       width:100%;
       display: flex;
       height: 900px;
