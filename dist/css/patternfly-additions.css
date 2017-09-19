@@ -7478,7 +7478,7 @@ table.dataTable th:active {
   border-right: 1px solid #d1d1d1;
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .wizard-pf-sidebar {
     display: inherit;
     -ms-flex: 0 0 auto;
@@ -7561,7 +7561,7 @@ table.dataTable th:active {
 .wizard-pf-steps {
   border-bottom: solid 1px #d1d1d1;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .wizard-pf-steps {
     text-align: center;
   }
@@ -7578,7 +7578,7 @@ table.dataTable th:active {
   padding: 15px 0;
   /* draw the step number in the circle */
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .wizard-pf-steps-indicator {
     background: #fff;
     height: 120px;
@@ -7605,7 +7605,7 @@ table.dataTable th:active {
 .wizard-pf-steps-indicator li:not(.active) {
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .wizard-pf-steps-indicator li:not(.active) {
     display: block;
   }
@@ -7617,7 +7617,7 @@ table.dataTable th:active {
   display: flex;
   font-weight: 700;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .wizard-pf-steps-indicator li a {
     font-weight: normal;
     -ms-flex-pack: center;
@@ -7640,7 +7640,7 @@ table.dataTable th:active {
 .wizard-pf-steps-indicator li a .wizard-pf-step-title-substep:not(.active) {
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .wizard-pf-steps-indicator li {
     /* don't draw the line between the circles on the ends */
   }
@@ -7692,7 +7692,7 @@ table.dataTable th:active {
   line-height: 22px;
   width: 25px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .wizard-pf-steps-indicator .wizard-pf-step-number {
     left: calc(50% - 13px);
     position: absolute;
@@ -7717,7 +7717,7 @@ table.dataTable th:active {
   vertical-align: top;
   width: 100%;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .wizard-pf-main {
     overflow: auto;
     padding: 3em;
@@ -7848,7 +7848,7 @@ table.dataTable th:active {
 .wizard-pf-footer .btn-cancel {
   margin-right: 25px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .wizard-pf-row {
     display: -ms-flexbox;
     display: flex;
