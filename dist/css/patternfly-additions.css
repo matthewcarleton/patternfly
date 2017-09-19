@@ -7459,28 +7459,28 @@ table.dataTable th:active {
   transition: visibility 100ms, opacity 100ms linear;
 }
 .wizard-pf {
+  padding: 10px;
   margin: 0 auto;
   max-height: 900px;
-  padding: 10px;
   width: auto;
 }
 .wizard-pf .modal-content {
   min-height: 100%;
 }
 .wizard-pf-body {
+  background: #fff;
   padding: 0;
   position: static;
-  background: #fff;
 }
 /* styles the sidebard containing the sub-steps */
 .wizard-pf-sidebar {
+  background: #fafafa;
+  border-right: 1px solid #d1d1d1;
   display: none;
 }
 @media (min-width: 992px) {
   .wizard-pf-sidebar {
     display: inherit;
-    background: #fafafa;
-    border-right: 1px solid #d1d1d1;
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     overflow-x: hidden;
@@ -7523,8 +7523,8 @@ table.dataTable th:active {
     cursor: default;
   }
   .wizard-pf-sidebar .list-group-item.active > a:before {
-    background: #39a5dc;
     content: " ";
+    background: #39a5dc;
     height: 100%;
     left: 0;
     position: absolute;
@@ -7567,24 +7567,24 @@ table.dataTable th:active {
   }
 }
 .wizard-pf-steps-indicator {
-  font-size: 16px;
+  background: #ededed;
+  border-top: 1px solid #d1d1d1;
   display: inline-block;
   display: -ms-flexbox;
   display: flex;
+  font-size: 16px;
   list-style: none;
-  padding: 15px 0;
   margin-bottom: 0;
-  background: #ededed;
-  border-top: 1px solid #d1d1d1;
+  padding: 15px 0;
   /* draw the step number in the circle */
 }
 @media (min-width: 992px) {
   .wizard-pf-steps-indicator {
+    background: #fff;
     height: 120px;
     padding: 38px 0 0;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    background: #fff;
   }
 }
 .wizard-pf-steps-indicator li {
@@ -7611,10 +7611,10 @@ table.dataTable th:active {
   }
 }
 .wizard-pf-steps-indicator li a {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-align: center;
       align-items: center;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 700;
 }
 @media (min-width: 992px) {
@@ -7670,8 +7670,8 @@ table.dataTable th:active {
 }
 .wizard-pf-steps-indicator li a {
   color: #030303;
-  font-size: 16px;
   cursor: pointer;
+  font-size: 16px;
   margin-left: 1em;
   margin-right: 1em;
   text-decoration: none;
@@ -7694,35 +7694,35 @@ table.dataTable th:active {
 }
 @media (min-width: 992px) {
   .wizard-pf-steps-indicator .wizard-pf-step-number {
+    left: calc(50% - 13px);
     position: absolute;
     top: 27px;
-    left: calc(50% - 13px);
   }
 }
 .wizard-pf-steps-indicator .active .wizard-pf-step-number {
-  cursor: default;
   background-color: #39a5dc;
   border-color: #39a5dc;
+  cursor: default;
   color: #fff;
 }
 .wizard-pf-steps-indicator .viewed-pf .wizard-pf-step-number {
+  color: #030303;
   background-color: #fff;
   border-color: #39a5dc;
-  color: #030303;
 }
 /* styles the main content portion of the wizard */
 .wizard-pf-main {
   height: 100%;
-  vertical-align: top;
   padding: 1em;
+  vertical-align: top;
   width: 100%;
 }
 @media (min-width: 992px) {
   .wizard-pf-main {
+    overflow: auto;
     padding: 3em;
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
-    overflow: auto;
   }
 }
 .wizard-pf-main .blank-slate-pf {
@@ -7840,19 +7840,19 @@ table.dataTable th:active {
 }
 /* styles the footer */
 .wizard-pf-footer {
+  background: #fff;
   border-top: 1px solid #d1d1d1;
   margin-top: 0;
   padding-bottom: 17px;
-  background: #fff;
 }
 .wizard-pf-footer .btn-cancel {
   margin-right: 25px;
 }
 @media (min-width: 992px) {
   .wizard-pf-row {
-    width: 100%;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     height: 900px;
     max-height: 65vh;
   }
