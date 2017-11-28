@@ -2,6 +2,7 @@
 *.sublime-workspace
 *.sublime-project
 *.idea
+package-lock.json
 
 # Ignore vim files
 *.swp
@@ -24,9 +25,19 @@ npm.cmd
 
 # Ignore generated files
 patternfly.spec
+*.tgz
 
 # Ignore Desktop Services Store
 .DS_Store
 
 #Ignore generated dist files
 /dist
+
+#Ignore backstop regression test images and reports
+/backstop_data/bitmaps_test
+/backstop_data/html_report
+/backstop_data/pdf_report
+/backstop_data/ci_report
+regression-report.pdf
+backstop.json
+backstop.*.json

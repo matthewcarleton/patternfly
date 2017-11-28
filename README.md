@@ -73,6 +73,10 @@ Development setup requires Node.js and Ruby. If you do not already have Node.js,
 
 The PatternFly code includes a number of dependencies that are not committed to this repository.  To add them, follow the instructions below under "Install NPM Dependencies".  Please make sure you keep them updated (see [Keeping NPM Dependencies Updated](#keeping-npm-dependencies-updated)).
 
+## Development - Updating Dependencies
+
+The npm-check-updates tool is available and configured to apply dependency updates to the project by running the command `npm run ncu`.  The package.json changes will have to be committed and a PR created.
+
 ## Autoprefixer
 
 Patternfly uses [Autoprefixer](https://github.com/postcss/autoprefixer) to auto add prefixes to its output CSS. Since Patternfly extends some of the core Bootstrap3 less which contains prefixes, we also explicitly add prefixes in these cases to ensure backwards compatibility with Bootstrap3. If consuming Patternfly LESS and compiling, you can define your own target prefixes using [browserlist](https://github.com/ai/browserslist).
@@ -151,6 +155,50 @@ This local static asset server (i.e., [http://localhost:9000](http://localhost:9
 
 See [http://codeguide.patternfly.org/](http://codeguide.patternfly.org/).
 
+### Commiting changes
+
+PatternFly uses the [semantic-release tool](https://github.com/semantic-release/semantic-release) to provide a continuous release mechanism for PatternFly.  In order for this tool to correctly increment the project version, and include your changes in the generated release notes, you will have to format your commit messages according to a well-defined commit message format.
+
+We have configured the [commitizen tool](https://github.com/commitizen/cz-cli) to assist you in formatting your commit messages corrctly.  To use this tool run the following command instead of `git commit`:
+
+```
+npm run commit
+```
+
+#### Git Commit Guidelines
+
+Alternatively, if you are familiar with the commititzen message format you can format the message manually.  A summary of the commit message format is as follows:
+
+Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
+format that includes a **type**, a **scope** and a **subject** ([full explanation](https://github.com/stevemao/conventional-changelog-angular/blob/master/convention.md)):
+
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+##### Patch Release
+
+```
+fix(pencil): stop graphite breaking when too much pressure applied
+```
+
+##### Feature Release
+
+```
+feat(pencil): add 'graphiteWidth' option
+```
+
+##### Breaking Release
+
+```
+perf(pencil): remove graphiteWidth option
+```
+The tool will prompt you with several questions that it will use to correctly format your commit message.  You can then proceed with your PR as you normally would.
+
 ## Build
 
 ### CSS
@@ -194,44 +242,23 @@ or
 ```
 grunt karma
 ```
-## Release
+### Visual Regression Testing
 
-PatternFly is released through the Bower and npm.
+Visual regression tests provide a way to detect if unintended visual changes have
+occured as a result of changes in the code. They work by taking screenshots of
+what components or pages should look like in a browser (known as references), and then comparing the references to screenshots of those components or pages with your code changes applied. Once the tests are complete, you will be a shown the test results in a browser.
 
-To release a new version version of PatternFly, edit `bower.json` and `package.json` accordingly.
+You can run all of the test scenarios with `npm run regressions`.
 
-Update the version listed in `bower.json` by editing the file and changing the line:
+You can run specific test scenarios with `npm run regressions <scenario-name>`. This
+will probably be most useful while you are doing active development and only want
+to check a few scenarios without running the entire suite.
+(Ex. `npm run regressions alerts buttons`)
 
-```
-"version": "<new_version>"
-```
-
-Update the version listed in `package.json` by editing the file and changing the line:
-
-```
-"version": "<new_version>"
-```
-
-Commit the version bump:
-
-```
-git commit -a -m "Version bump to <new_version>"
-```
-
-Tag and push upstream (assuming you have commit access):
-
-```
-git tag <new_version>
-git push && git push --tags
-```
-
-The Bower package manager determines available versions and installs based upon git tags, so the new version will now be automatically available via Bower.
-
-To publish a new version to npm, execute:
-
-```
-npm publish
-```
+To approve conflicts run: `npm run approve-conflicts`. This is the command you want to run
+when the tests find conflicts, but the conflicts are intended. This command
+will replace the base image, so if you run the regression tests again, the
+tests should pass.
 
 ## Documentation
 
