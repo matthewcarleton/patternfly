@@ -13,6 +13,9 @@
     </a>
   </div>
   <nav class="collapse navbar-collapse">
+    {% if page.contextselector %}
+    {% include widgets/framework/context-selector.html %}
+    {% endif %}
     <ul class="nav navbar-nav navbar-right navbar-iconic navbar-utility">
       {% if page.applauncher %}
       {% include widgets/framework/application-launcher.html icons=launchericons grid=launchergrid %}

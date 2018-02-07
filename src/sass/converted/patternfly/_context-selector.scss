@@ -1,0 +1,48 @@
+//
+// Context Selector
+// --------------------------------------------------
+
+.navbar-pf-vertical .nav.contextselector-pf {
+    .nav-item-iconic {
+      padding:16px 20px;
+    }
+  }
+
+  .contextselector-pf {
+    &-label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    &-title {
+      font-size: 14px;
+    }
+    .dropdown {
+      &.open, &:hover {
+        background-color: $navbar-pf-navbar-primary-active-bg-color-stop;
+      }
+    }
+
+    .caret {
+      margin-left: 30px;
+    }
+    .form-group {
+      padding:0 5px;
+    }
+    .contextselector-pf-list {
+      max-height: 200px;
+      overflow: scroll;
+      li {
+        padding-left: 5px;
+        &:hover {
+          background: $color-pf-blue-400;
+          a {
+            color: $color-pf-white;
+            text-decoration: none;
+          }
+        }
+      }
+      a {
+        color: $color-pf-black-800;
+      }
+    }
+  }

@@ -1,0 +1,20 @@
+---
+categories: [Widgets]
+css-extra: false
+layout: page
+resource: true
+contextselector: true
+navindex: 1
+title: Context Selector
+---
+
+<h2>Vertical Nav Bar</h2>
+
+{% include widgets/layouts/navbar-vertical.html navindex=5 %}
+
+
+<script>
+  $(document).ready(function() {
+    $('.contextselector-pf .dropdown-toggle').eq(0).click();
+  });
+</script>
